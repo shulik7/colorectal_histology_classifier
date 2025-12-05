@@ -267,10 +267,11 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👤 Author
 
-**Your Name**
+**Shuli Kang**
 - GitHub: [shulik7](https://github.com/shulik7)
 - Hugging Face: [shulik7](https://huggingface.co/shulik7)
-
+- LinkedIn: [shulik](https://www.linkedin.com/in/shulik/)
+  
 ## 🙏 Acknowledgments
 
 - Google Research for the pre-trained ViT model
