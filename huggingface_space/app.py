@@ -141,7 +141,7 @@ if os.path.exists(example_dir):
     examples = [[f] for f in example_files]
 
 # Create Gradio interface
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
+with gr.Blocks() as demo:
     gr.Markdown(
         """
         # 🔬 Colorectal Histology Tissue Classifier
@@ -185,10 +185,19 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
     
     # Add examples if available
     if examples:
+        # Create examples with labels extracted from filenames
+        example_labels = []
+        for example_path in examples:
+            filename = os.path.basename(example_path[0])
+            # Extract label from filename (e.g., "0_tumor_example.png" -> "Tumor")
+            label = filename.split('_')[1].capitalize() if '_' in filename else filename.split('.')[0].capitalize()
+            example_labels.append(label)
+        
         gr.Examples(
             examples=examples,
             inputs=input_image,
-            label="Try these example images:"
+            label=f"Try these example images (filename shows tissue type):",
+            examples_per_page=8
         )
     else:
         gr.Markdown(
