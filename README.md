@@ -185,7 +185,7 @@ This project uses a two-stage training approach:
 
 ## 🎨 Try it Online
 
-Try the model in an interactive demo: [Hugging Face Space](https://huggingface.co/spaces/YOUR-USERNAME/vit-colorectal-histology)
+Try the model in an interactive demo: [Hugging Face Space](https://huggingface.co/spaces/shulik7/vit-colorectal-histology)
 
 *The online demo uses the deployment model trained on 100% of the data.*
 
